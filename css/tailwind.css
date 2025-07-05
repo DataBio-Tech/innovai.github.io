@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary Colors */
+  --color-primary: #2E86AB; /* blue-600 */
+  --color-primary-50: #EBF4F8; /* blue-50 */
+  --color-primary-100: #D7E9F1; /* blue-100 */
+  --color-primary-200: #AFD3E3; /* blue-200 */
+  --color-primary-300: #87BDD5; /* blue-300 */
+  --color-primary-400: #5FA7C7; /* blue-400 */
+  --color-primary-500: #2E86AB; /* blue-500 */
+  --color-primary-600: #256B89; /* blue-600 */
+  --color-primary-700: #1C5067; /* blue-700 */
+  --color-primary-800: #133545; /* blue-800 */
+  --color-primary-900: #0A1A23; /* blue-900 */
+
+  /* Secondary Colors */
+  --color-secondary: #A23B72; /* pink-600 */
+  --color-secondary-50: #F5E8F0; /* pink-50 */
+  --color-secondary-100: #EBD1E1; /* pink-100 */
+  --color-secondary-200: #D7A3C3; /* pink-200 */
+  --color-secondary-300: #C375A5; /* pink-300 */
+  --color-secondary-400: #AF4787; /* pink-400 */
+  --color-secondary-500: #A23B72; /* pink-500 */
+  --color-secondary-600: #822F5B; /* pink-600 */
+  --color-secondary-700: #612344; /* pink-700 */
+  --color-secondary-800: #41172D; /* pink-800 */
+  --color-secondary-900: #200B16; /* pink-900 */
+
+  /* Accent Colors */
+  --color-accent: #F18F01; /* orange-500 */
+  --color-accent-50: #FEF7E6; /* orange-50 */
+  --color-accent-100: #FDEFCD; /* orange-100 */
+  --color-accent-200: #FBDF9B; /* orange-200 */
+  --color-accent-300: #F9CF69; /* orange-300 */
+  --color-accent-400: #F7BF37; /* orange-400 */
+  --color-accent-500: #F18F01; /* orange-500 */
+  --color-accent-600: #C17301; /* orange-600 */
+  --color-accent-700: #915701; /* orange-700 */
+  --color-accent-800: #613B00; /* orange-800 */
+  --color-accent-900: #301E00; /* orange-900 */
+
+  /* Background Colors */
+  --color-background: #FFFFFF; /* white */
+  --color-surface: #F8F9FA; /* gray-50 */
+
+  /* Text Colors */
+  --color-text-primary: #1A1A1A; /* gray-900 */
+  --color-text-secondary: #6C757D; /* gray-600 */
+
+  /* Status Colors */
+  --color-success: #28A745; /* green-600 */
+  --color-success-50: #E8F5E8; /* green-50 */
+  --color-success-100: #D1EBD1; /* green-100 */
+  --color-success-200: #A3D7A3; /* green-200 */
+  --color-success-300: #75C375; /* green-300 */
+  --color-success-400: #47AF47; /* green-400 */
+  --color-success-500: #28A745; /* green-500 */
+  --color-success-600: #208637; /* green-600 */
+  --color-success-700: #186529; /* green-700 */
+  --color-success-800: #10441B; /* green-800 */
+  --color-success-900: #08220D; /* green-900 */
+
+  --color-warning: #FF6B35; /* red-orange-500 */
+  --color-warning-50: #FFF0EC; /* red-orange-50 */
+  --color-warning-100: #FFE1D9; /* red-orange-100 */
+  --color-warning-200: #FFC3B3; /* red-orange-200 */
+  --color-warning-300: #FFA58D; /* red-orange-300 */
+  --color-warning-400: #FF8767; /* red-orange-400 */
+  --color-warning-500: #FF6B35; /* red-orange-500 */
+  --color-warning-600: #CC562A; /* red-orange-600 */
+  --color-warning-700: #99401F; /* red-orange-700 */
+  --color-warning-800: #662B15; /* red-orange-800 */
+  --color-warning-900: #33150A; /* red-orange-900 */
+
+  --color-error: #DC3545; /* red-600 */
+  --color-error-50: #FBEAEA; /* red-50 */
+  --color-error-100: #F7D5D5; /* red-100 */
+  --color-error-200: #EFABAB; /* red-200 */
+  --color-error-300: #E78181; /* red-300 */
+  --color-error-400: #DF5757; /* red-400 */
+  --color-error-500: #DC3545; /* red-500 */
+  --color-error-600: #B02A37; /* red-600 */
+  --color-error-700: #841F29; /* red-700 */
+  --color-error-800: #58151B; /* red-800 */
+  --color-error-900: #2C0A0D; /* red-900 */
+
+  /* Border Colors */
+  --color-border: #E9ECEF; /* gray-200 */
+  --color-border-focus: #F18F01; /* orange-500 */
+}
+
+/* Custom Shadows */
+.shadow-cta {
+  box-shadow: 0 4px 12px rgba(46, 134, 171, 0.15);
+}
+
+.shadow-card {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Custom Transitions */
+.transition-smooth {
+  transition: all 250ms ease-in-out;
+}
+
+/* Custom Focus States */
+.focus-accent:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 2px rgba(241, 143, 1, 0.2);
+}
