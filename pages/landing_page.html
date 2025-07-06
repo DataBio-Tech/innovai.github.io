@@ -26,10 +26,22 @@
                 
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#problema" class="text-text-secondary hover:text-primary transition-smooth">Problema</a>
-                    <a href="#solucion" class="text-text-secondary hover:text-primary transition-smooth">Solución</a>
-                    <a href="#equipo" class="text-text-secondary hover:text-primary transition-smooth">Equipo</a>
-                    <a href="#proyectos" class="text-text-secondary hover:text-primary transition-smooth">Proyectos</a>
+                    <a href="#problema" class="text-text-secondary hover:text-primary transition-smooth" data-translate="nav_problem">Problema</a>
+                    <a href="#solucion" class="text-text-secondary hover:text-primary transition-smooth" data-translate="nav_solution">Solución</a>
+                    <a href="#equipo" class="text-text-secondary hover:text-primary transition-smooth" data-translate="nav_team">Equipo</a>
+                    <a href="#proyectos" class="text-text-secondary hover:text-primary transition-smooth" data-translate="nav_projects">Proyectos</a>
+                    <div class="language-switcher relative">
+                        <button id="language-toggle" class="flex items-center space-x-2 px-3 py-2 rounded-lg border border-border hover:bg-surface transition-smooth">
+                            <span id="current-language">ES</span>
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M7 10l5 5 5-5z"/>
+                            </svg>
+                        </button>
+                        <div id="language-dropdown" class="absolute right-0 mt-2 w-32 bg-white rounded-lg shadow-lg border border-border hidden">
+                            <button class="language-option w-full px-4 py-2 text-left hover:bg-surface transition-smooth" data-lang="es">Español</button>
+                            <button class="language-option w-full px-4 py-2 text-left hover:bg-surface transition-smooth" data-lang="en">English</button>
+                        </div>
+                    </div>
                     <a href="#registration-section">
                     <button class="bg-accent text-white px-6 py-2 rounded-lg font-semibold hover:bg-accent-600 transition-smooth shadow-cta">
                         Registrarse
@@ -48,12 +60,29 @@
         <!-- Mobile Menu -->
         <div class="md:hidden hidden" id="mobile-menu">
             <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-border">
-                <a href="#problema" class="block px-3 py-2 text-text-secondary hover:text-primary">Problema</a>
-                <a href="#solucion" class="block px-3 py-2 text-text-secondary hover:text-primary">Solución</a>
-                <a href="#equipo" class="block px-3 py-2 text-text-secondary hover:text-primary">Equipo</a>
-                <a href="#proyectos" class="block px-3 py-2 text-text-secondary hover:text-primary">Proyectos</a>
-                <a href="#registration-section">
-                <button class="w-full mt-2 bg-accent text-white px-4 py-2 rounded-lg font-semibold">
+                <a href="#problema" class="block px-3 py-2 text-text-secondary hover:text-primary" data-translate="nav_problem">Problema</a>
+                <a href="#solucion" class="block px-3 py-2 text-text-secondary hover:text-primary" data-translate="nav_solution">Solución</a>
+                <a href="#equipo" class="block px-3 py-2 text-text-secondary hover:text-primary" data-translate="nav_team">Equipo</a>
+                <a href="#proyectos" class="block px-3 py-2 text-text-secondary hover:text-primary" data-translate="nav_projects">Proyectos</a>
+                
+                <!-- Mobile Language Switcher -->
+                <div class="px-3 py-2">
+                    <div class="language-switcher relative">
+                        <button id="mobile-language-toggle" class="flex items-center space-x-2 px-3 py-2 rounded-lg border border-border hover:bg-surface transition-smooth w-full">
+                            <span id="mobile-current-language">ES</span>
+                            <svg class="w-4 h-4 ml-auto" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M7 10l5 5 5-5z"/>
+                            </svg>
+                        </button>
+                        <div id="mobile-language-dropdown" class="mt-2 w-full bg-white rounded-lg shadow-lg border border-border hidden">
+                            <button class="mobile-language-option w-full px-4 py-2 text-left hover:bg-surface transition-smooth" data-lang="es">Español</button>
+                            <button class="mobile-language-option w-full px-4 py-2 text-left hover:bg-surface transition-smooth" data-lang="en">English</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="w-full mt-2 bg-accent text-white px-4 py-2 rounded-lg font-semibold" data-translate="nav_register">
+
                     Registrarse
                 </button></a>
             </div>
@@ -82,11 +111,11 @@
                 <div class="flex items-center justify-center space-x-6 mb-8 flex-wrap">
                     <div class="flex items-center space-x-2 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-card">
                         <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?q=80&w=2126&auto=format&fit=crop&ixlib=rb-4.0.3" alt="CORFO Logo" class="h-6 w-6 rounded" onerror="this.src='https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
-                        <span class="text-sm font-semibold text-primary">Buscando respaldo de CORFO</span>
+                        <span class="text-sm font-semibold text-primary" data-translate="hero_corfo_support">Buscando respaldo de CORFO</span>
                     </div>
                     <div class="flex items-center space-x-2 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-card">
                         <div class="h-2 w-2 bg-success rounded-full animate-pulse"></div>
-                        <span class="text-sm font-semibold text-text-primary">Buscamos nuestros primeros 1,000 registrados</span>
+                        <span class="text-sm font-semibold text-text-primary">Buscamos nuestros primeros 1,000 <span data-translate="hero_registered_users">registrados</span></span>
                     </div>
                 </div>
                 
@@ -98,19 +127,19 @@
                 </h1>
                 
                 <!-- Subheadline -->
-                <p class="text-xl md:text-2xl text-text-secondary mb-8 max-w-3xl mx-auto leading-relaxed">
+                <p class="text-xl md:text-2xl text-text-secondary mb-8 max-w-3xl mx-auto leading-relaxed" data-translate="hero_subtitle">
                     Estamos creando la primera plataforma interdisciplinaria que conecta a chilenos de distintas áreas del saber para transformar desafíos locales en soluciones de impacto global.
                 </p>
                 
                 <!-- CTAs -->
                 <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
                     <a href="#solucion">
-                        <button class="bg-primary text-white font-bold px-8 py-4 rounded-lg text-lg font-semibold hover:bg-primary-700 transition-smooth shadow-cta min-w-[200px]">
+                        <button class="bg-primary text-white font-bold px-8 py-4 rounded-lg text-lg font-semibold hover:bg-primary-700 transition-smooth shadow-cta min-w-[200px]" data-translate="hero_discover_platform">
                             Descubre InnovAI
                         </button>
                     </a>
                     <a href="#registration-section">
-                        <button class="border-2 border-accent text-accent px-8 py-4 rounded-lg text-lg font-semibold hover:bg-accent hover:text-white transition-smooth min-w-[200px]">
+                        <button class="border-2 border-accent text-accent px-8 py-4 rounded-lg text-lg font-semibold hover:bg-accent hover:text-white transition-smooth min-w-[200px]" data-translate="hero_register_updates">
                             Registrarse para Actualizaciones
                         </button>
                     </a>
@@ -120,15 +149,15 @@
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
                     <div class="text-center">
                         <div class="text-3xl font-bold text-primary mb-2">85%</div>
-                        <div class="text-text-secondary">Reducción en tiempo de desarrollo</div>
+                        <div class="text-text-secondary" data-translate="hero_stat1_label">Reducción en tiempo de desarrollo</div>
                     </div>
                     <div class="text-center">
                         <div class="text-3xl font-bold text-accent mb-2">3x</div>
-                        <div class="text-text-secondary">Más conexiones interdisciplinarias</div>
+                        <div class="text-text-secondary" data-translate="hero_stat2_label">Más conexiones interdisciplinarias</div>
                     </div>
                     <div class="text-center">
                         <div class="text-3xl font-bold text-secondary mb-2">$2.5M</div>
-                        <div class="text-text-secondary">En fondos concursables</div>
+                        <div class="text-text-secondary" data-translate="hero_stat3_label">En fondos concursables</div>
                     </div>
                 </div>
             </div>
@@ -1531,6 +1560,9 @@
                 </div>
             </div>
         </div>
+    <script src="../js/translations.js"></script>
+    <script src="../js/language-switcher.js"></script>
+    <script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
     </footer>
 
     <!-- JavaScript -->
